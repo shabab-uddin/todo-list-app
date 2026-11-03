@@ -1,5 +1,5 @@
 
-const API_URL = "/api/tasks";
+const API_URL = "https://todo-list-app-3mhc.onrender.com/api/tasks";
 
 const taskForm = document.getElementById("taskForm");
 const taskTitle = document.getElementById("taskTitle");

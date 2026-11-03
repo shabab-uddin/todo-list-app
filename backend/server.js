@@ -1,5 +1,6 @@
 
 require("dotenv").config();
+app.use(cors());
 
 const express = require("express");
 const path = require("path");
@@ -21,6 +22,7 @@ const pool = new Pool({
 });
 
 app.use(express.json());
+app.use(cors());
 
 // Serve frontend files
 app.use(

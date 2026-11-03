@@ -1,4 +1,3 @@
-
 {
   "name": "todo-list-backend",
   "version": "1.0.0",
@@ -9,6 +8,7 @@
     "dev": "node --watch server.js"
   },
   "dependencies": {
+    "cors": "^2.8.6",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "pg": "^8.16.3"
