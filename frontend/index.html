@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow | To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <header class="app-header">
+            <div>
+                <h1>TaskFlow</h1>
+                <p>Organize your day, one task at a time.</p>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="task-summary">
+                <div class="summary-card">
+                    <span>Total Tasks</span>
+                    <h2 id="totalTasks">0</h2>
+                </div>
+
+                <div class="summary-card">
+                    <span>Pending</span>
+                    <h2 id="pendingTasks">0</h2>
+                </div>
+
+                <div class="summary-card">
+                    <span>Completed</span>
+                    <h2 id="completedTasks">0</h2>
+                </div>
+            </section>
+
+            <section class="task-form-section">
+                <h2>Add a New Task</h2>
+
+                <form id="taskForm">
+
+                    <input
+                        type="text"
+                        id="taskTitle"
+                        placeholder="What do you need to do?"
+                        maxlength="150"
+                        required
+                    >
+
+                    <div class="form-options">
+
+                        <select id="taskPriority">
+                            <option value="Low">Low Priority</option>
+                            <option value="Medium" selected>
+                                Medium Priority
+                            </option>
+                            <option value="High">High Priority</option>
+                        </select>
+
+                        <input
+                            type="date"
+                            id="taskDueDate"
+                        >
+
+                        <button type="submit" id="submitButton">
+                            Add Task
+                        </button>
+
+                    </div>
+
+                </form>
+            </section>
+
+            <section class="task-list-section">
+
+                <div class="task-list-header">
+                    <h2>My Tasks</h2>
+
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Search tasks..."
+                    >
+                </div>
+
+                <div class="filter-buttons">
+
+                    <button class="filter-btn active"
+                        data-filter="all">
+                        All
+                    </button>
+
+                    <button class="filter-btn"
+                        data-filter="pending">
+                        Pending
+                    </button>
+
+                    <button class="filter-btn"
+                        data-filter="completed">
+                        Completed
+                    </button>
+
+                </div>
+
+                <div id="taskList" class="task-list">
+                    <p class="empty-message">
+                        Loading your tasks...
+                    </p>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Built with HTML, CSS, JavaScript and Node.js</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
